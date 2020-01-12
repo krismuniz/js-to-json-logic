@@ -1,0 +1,31 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12, 13]
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v1
+
+      - name: Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: List Versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Tests & Lint
+        run: |
+          npm run test
+          npm run lint
