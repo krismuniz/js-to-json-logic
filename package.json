@@ -15,9 +15,7 @@
   "author": "Kristian Muñiz <contact@krismuniz.com> (https://krismuniz.com)",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.7.7",
-    "@babel/traverse": "^7.7.4",
-    "json-logic-js": "^1.2.2"
+    "@babel/parser": "^7.7.7"
   },
   "devDependencies": {
     "chai": "^4.2.0",
