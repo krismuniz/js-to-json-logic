@@ -47,7 +47,7 @@ The `transformJS` function returns a JavaScript object, which can be stringified
 
 ### How it Works
 
-To parse input code, this module uses `@babel/parser` and `@babel/traverse` to parse JavaScript code into an [Abstract Syntax Tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree). The tree is then transformed into a JSON Logic object.
+To parse input code, this module uses `@babel/parser` to parse JavaScript code into an [Abstract Syntax Tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree). The tree is then transformed into a JSON Logic object.
 
 Said object is can then be used with the [`json-logic-js`](https://npmjs.com/package/json-logic-js) module to apply the interpreted rules to any type of data. [Learn More](http://jsonlogic.com)
 
