@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Generate JSON Logic objects using JavaScript syntax.",
   "main": "index.js",
+  "types": "js-to-json-logic.d.ts",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
     "lint": "eslint ."
