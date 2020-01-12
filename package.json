@@ -2,7 +2,7 @@
   "name": "js-to-json-logic",
   "version": "0.0.2",
   "description": "Generate JSON Logic objects using JavaScript syntax.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "types": "js-to-json-logic.d.ts",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
