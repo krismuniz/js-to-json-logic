@@ -8,7 +8,13 @@
     "test": "nyc --reporter=html --reporter=text mocha",
     "lint": "eslint ."
   },
+  "runkitExample": "const transformJS = require('js-to-json-logic');",
   "keywords": [
+    "json",
+    "logic",
+    "rules",
+    "code",
+    "jsonlogic",
     "json-logic",
     "js-to-json"
   ],
