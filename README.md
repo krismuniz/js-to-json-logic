@@ -1,8 +1,8 @@
-# JS to JSON Logic
+# JS to JSONLogic
 
 [![npm](https://img.shields.io/npm/v/js-to-json-logic.svg?style=flat-square)](https://npm.im/js-to-json-logic) [![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT) [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/krismuniz/js-to-json-logic/build?logo=github&logoColor=white&style=flat-square)](https://github.com/krismuniz/js-to-json-logic/actions?query=workflow%3Abuild) ![Type Declarations](https://img.shields.io/npm/types/js-to-json-logic.svg?style=flat-square) [![Try It on RunKit](https://img.shields.io/badge/Try_It_on-RunKit-f55fa6?labelColor=491757&style=flat-square)](https://npm.runkit.com/js-to-json-logic)
 
-Transform JavaScript expressions into [JSON Logic](http://jsonlogic.com) objects. For Node.js.
+Transform JavaScript expressions into [JSONLogic](http://jsonlogic.com) objects. For Node.js.
 
 > NOTICE: This module is still in beta!
 
@@ -47,7 +47,7 @@ The `transformJS` function returns a JavaScript object, which can be stringified
 
 ### How it Works
 
-To parse input code, this module uses `@babel/parser` to parse JavaScript code into an [Abstract Syntax Tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree). The tree is then transformed into a JSON Logic object.
+To parse input code, this module uses `@babel/parser` to parse JavaScript code into an [Abstract Syntax Tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree). The tree is then transformed into a JSONLogic object.
 
 Said object is can then be used with the [`json-logic-js`](https://npmjs.com/package/json-logic-js) module to apply the interpreted rules to any type of data. [Learn More](http://jsonlogic.com)
 
