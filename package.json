@@ -1,6 +1,6 @@
 {
   "name": "js-to-json-logic",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Generate JSON Logic objects using JavaScript syntax.",
   "main": "lib/index.js",
   "types": "js-to-json-logic.d.ts",
