@@ -59,7 +59,7 @@ Said object is can then be used with the [`json-logic-js`](https://npmjs.com/pac
 | String Literals                | full    | `"banana"`, `"hello world"`                              |
 | Template Literals              | full    | <code>\`hello, \${first_name}\`</code>                   |
 | Numeric Literals               | full    | `1`, `2.04`, `-10292.64`, `0b01011010`, `0xFF00FF`, etc. |
-| Object Expressions / Literals  | full    | `{ a: [1, false, 'string'], b: false, d: 'hello' }`      |
+| Object Expressions / Literals  | full    | `({ a: [1, false, 'string'], b: false, d: 'hello' })`    |
 | Array Expressions              | full    | `[1, 2, 3]`                                              |
 | Spread Operator in Arrays      | full    | `[1, 2, ...myArr]`                                       |
 | Null Literals                  | full    | `null`                                                   |

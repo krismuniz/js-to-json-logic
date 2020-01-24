@@ -300,7 +300,8 @@ describe('parseJS', function () {
   })
 
   it('throw an error when syntax is invalid', function () {
-    testError('99999eeee999e9e9e9', 'Could not parse code. Invalid number (1:0)')
+    testError('1 / function', 'Could not parse code. Unexpected token, expected "(" (1:12)')
+    testError('99999eeee999e9e9e9', 'Could not parse code. Identifier directly after number (1:6)')
     testError('#great', "Could not parse code. Unexpected character '#' (1:1)")
   })
 })
