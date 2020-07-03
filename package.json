@@ -9,10 +9,14 @@
     "url": "git://github.com/krismuniz/js-to-json-logic.git"
   },
   "scripts": {
-    "pre-commit": "npm test",
-    "pre-push": "npm test",
     "test": "nyc --reporter=html --reporter=text mocha",
     "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
   },
   "files": [
     "*.d.ts",
