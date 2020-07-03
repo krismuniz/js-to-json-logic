@@ -1,9 +1,13 @@
 {
   "name": "js-to-json-logic",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Generate JSON Logic objects using JavaScript syntax.",
   "main": "lib/index.js",
   "types": "js-to-json-logic.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/krismuniz/js-to-json-logic.git"
+  },
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
     "lint": "eslint ."
@@ -21,17 +25,17 @@
   "author": "Kristian Muñiz <contact@krismuniz.com> (https://krismuniz.com)",
   "license": "MIT",
   "dependencies": {
-    "@babel/parser": "^7.7.7"
+    "eslint-plugin-import": "^2.22.0",
+    "meriyah": "^1.9.15"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.3.1",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "mocha": "^7.0.0",
-    "nyc": "^15.0.0"
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
   }
 }

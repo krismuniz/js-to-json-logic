@@ -14,12 +14,9 @@ function testOutput (inputRule, exp) {
 }
 
 function testError (inputRule, errorMessage) {
-  return testOutput(inputRule, (result) => {
-    expect(result).to.be.an('object')
-      .and.have.property('parsing_error')
-      .that.has.ownProperty('message')
-      .that.equals(errorMessage)
-  })
+  return expect(() => transformJS(inputRule))
+    .to.throw(Error, errorMessage)
+    .and.have.property('at')
 }
 
 describe('parseJS', function () {
@@ -31,6 +28,7 @@ describe('parseJS', function () {
   })
 
   it('parse identifiers (variables) and nullish values', function () {
+    testOutput('', null)
     testOutput('myVar', { var: 'myVar' })
     testOutput('null', null)
     testOutput('undefined', null)
@@ -290,18 +288,19 @@ describe('parseJS', function () {
     testError('switch (rule) { }', 'Switch statements are not supported.')
     testError('const x = []', 'Variable (var, let, const) declarations are not supported.')
     testError('x = 1', 'Assignments not supported.')
-    testError('with (a) {}', 'Invalid node \'WithStatement\'. Not supported.')
+    testError('with (a) {}', 'Could not parse code. [1:6]: Strict mode code may not include a with statement')
+    testError('a ?? b', "Could not parse code. Invalid node 'CoalesceExpression'. Not supported.")
   })
 
   it('throw an error when providing a multi-expression block statement or directives', function () {
     testError('{ a === b; c === d }', 'Block statements can only have one expression statement.')
-    testError('a === b; b === c;', 'Block statements can only have one expression statement.')
+    testError('a === b; b === c;', 'Only one expression statement allowed.')
     testError('"hi";"hey";', 'Only one expression statement allowed.')
   })
 
   it('throw an error when syntax is invalid', function () {
-    testError('1 / function', 'Could not parse code. Unexpected token, expected "(" (1:12)')
-    testError('99999eeee999e9e9e9', 'Could not parse code. Identifier directly after number (1:6)')
-    testError('#great', "Could not parse code. Unexpected character '#' (1:1)")
+    testError('1 / function', "Could not parse code. [1:12]: Expected '('")
+    testError('99999eeee999e9e9e9', 'Could not parse code. [1:6]: Non-number found after exponent indicator')
+    testError('#great', "Private names are not supported. Unexpected character '#'")
   })
 })

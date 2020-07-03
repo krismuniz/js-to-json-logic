@@ -86,11 +86,17 @@ Notes:
 
 - If a specific syntactic JS feature is not specified in the table above, it's likely that it isn't supported. If you have an idea on how to support said feature, feel free to file a GitHub Issue.
 
+### In Plans to Support
+
+- Optional Chaining
+- Nullish Coalescing
+
 ### Unsupported Syntax
 
 The following syntactic features are not supported by this module.
 
 - Class Declarations
+- Private name expressions `#myPrivateProperty`
 - Update Expressions (`i++`, `i--`, etc.)
 - Assignment Expressions
 - Tagged Template Expressions
