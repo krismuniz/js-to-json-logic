@@ -2,7 +2,7 @@
 
 All notable changes to this library will be documented in this file.
 
-## 0.1.0 - 2020-07-02
+## 0.1.1 - 2020-07-02
 
 ### 🚨 Breaking Changes
 
